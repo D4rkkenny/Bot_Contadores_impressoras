@@ -3,11 +3,10 @@ import time
 import mapeamento_de_clique_impressora as mapeamento
 
 class Coleta_contador:
-    def __init__(self, item, link, modelo, xpath):
+    def __init__(self, item, link, modelo):
         self.item = item
         self.link = link
         self.modelo = modelo
-        self.xpath = xpath
 
     def abrir_navegador(self):
         contador = 0
@@ -23,7 +22,7 @@ class Coleta_contador:
                 except (TimeoutError) as e:
                     print(f"Erro: A impressora de item {self.item} ocorreu erro {e}") 
 
-                contador = mapeamento.clique_impressora(self.modelo, page, self.xpath)
+                contador = mapeamento.clique_impressora(self.modelo, page)
                 nome_do_arquivo = ""
                 ip_impressora = self.link.split("/")
                 nome_do_arquivo = f"{self.item} - {ip_impressora[2]} - {contador}"
