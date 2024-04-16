@@ -11,10 +11,9 @@ for impressora_nome, impressora_info in impressoras_data.items():
     item = impressora_info.get("item")
     link = impressora_info.get("link")
     modelo = impressora_info.get("modelo")
-    xpath = impressora_info.get("xpath")
     caminho = impressora_info.get("caminho")
 
-    coletor = Coleta_contador.Coleta_contador(item, link, modelo, xpath)
+    coletor = Coleta_contador.Coleta_contador(item, link, modelo)
     coletor.abrir_navegador()
 
     organizador = Organizar_arquivos(item, caminho, (datetime.now().month - 1), datetime.now().year)

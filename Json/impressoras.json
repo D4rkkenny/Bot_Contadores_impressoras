@@ -4,7 +4,6 @@
             "item" : "identificador da impressora",
             "link" : "link de acesso aos contadores da impressora caso a impressora seja uma samsung M5360 e ricoh MP C2003 precisa do link direto da pagina de contadores",
             "modelo" : "Modelo da impressora",
-            "xpath" : "xpath do contador total em caso da impressora Ricoh MP C2003 somente o xpath da copiadora preto e branco",
             "caminho" : "Caminho para onde a copia do contador vai, o codigo espera um caminho separado por anos e dentro de cada ano todos os meses separados pelo numero de cada mes, por exemplo: 2024\\4 - Abril"
         }        
     }
